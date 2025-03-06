@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เกี่ยวกับเรา - คณะกรรมการวิทยุคมนาคม</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+    <header>
+        <h1>คณะกรรมการวิทยุคมนาคม โรงเรียนเทพศิรินทร์ นนทบุรี</h1>
+    </header>
+    <nav>
+        <a href="index.html">หน้าแรก</a>
+        <a href="about.html">เกี่ยวกับเรา</a>
+        <a href="activities.html">กิจกรรม</a>
+        <a href="news.html">ข่าวสาร</a>
+        <a href="contact.html">ติดต่อเรา</a>
+    </nav>
+    <div class="content">
+        <section class="history">
+            <h2>ประวัติความเป็นมา</h2>
+            <p>คณะกรรมการวิทยุคมนาคม โรงเรียนเทพศิรินทร์ นนทบุรี ก่อตั้งขึ้นเพื่อสนับสนุนกิจกรรมสื่อสารและความปลอดภัย...</p>
+        </section>
+
+        <section class="announcements">
+            <h2>ประกาศสำคัญ</h2>
+            <ul>
+                <li>เปิดรับสมัครสมาชิกใหม่</li>
+                <li>แจ้งเตือนการใช้งานวิทยุสื่อสาร</li>
+            </ul>
+        </section>
+
+        <section class="gallery">
+            <h2>รูปกิจกรรม</h2>
+            <img src="activity1.jpg" alt="กิจกรรม 1">
+            <img src="activity2.jpg" alt="กิจกรรม 2">
+        </section>
+
+        <section class="radio-loan">
+            <h2>แบบฟอร์มขอยืมวิทยุสื่อสาร</h2>
+            <form id="radio-loan-form">
+                <label for="name">ชื่อ-นามสกุล:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="student-id">รหัสนักเรียน:</label>
+                <input type="text" id="student-id" name="student-id" required>
+
+                <label for="reason">เหตุผลในการขอยืม:</label>
+                <textarea id="reason" name="reason" rows="4" required></textarea>
+
+                <label for="borrow-date">วันที่ต้องการยืม:</label>
+                <input type="date" id="borrow-date" name="borrow-date" required>
+
+                <button type="submit">ส่งคำขอ</button>
+            </form>
+        </section>
+    </div>
+    <footer>
+        <p>© 2568 คณะกรรมการวิทยุคมนาคม โรงเรียนเทพศิรินทร์ นนทบุรี</p>
+    </footer>
+</body>
+</html>
