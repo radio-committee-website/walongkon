@@ -20,14 +20,14 @@
     <div class="content">
         <section class="history">
             <h2>ประวัติความเป็นมา</h2>
-            <p>...</p>
+            <p>คณะกรรมการวิทยุคมนาคม โรงเรียนเทพศิรินทร์ นนทบุรี ก่อตั้งขึ้นเพื่อสนับสนุนกิจกรรมสื่อสารและความปลอดภัย...</p>
         </section>
 
         <section class="announcements">
             <h2>ประกาศสำคัญ</h2>
             <ul>
                 <li>เปิดรับสมัครสมาชิกใหม่</li>
-                <img src="c:\Users\Walongkorn Pananon\Desktop\สัมมนา 2.67\รับสมัคร.jpg" alt="รับสมัคร">
+                <li>แจ้งเตือนการใช้งานวิทยุสื่อสาร</li>
             </ul>
         </section>
 
@@ -41,71 +41,20 @@
             <h2>แบบฟอร์มขอยืมวิทยุสื่อสาร</h2>
             <form id="radio-loan-form">
                 <label for="name">ชื่อ-นามสกุล:</label>
-                <input type="text" id="name" name="name"placeholder="นาย..." required>
-        
+                <input type="text" id="name" name="name" required>
+
                 <label for="student-id">รหัสนักเรียน:</label>
                 <input type="text" id="student-id" name="student-id" required>
-        
-                <label for="grade">ชั้น:</label>
-                <input type="text" id="grade" name="grade" placeholder="เช่น ม.4" required>
-        
-                <label for="student-number">เลขที่:</label>
-                <input type="number" id="student-number" name="student-number" min="1" required>
-        
-                <label for="room">ห้อง:</label>
-                <input type="text" id="room" name="room" placeholder="เช่น ห้อง 4/10" required>
-        
-                <label for="callsign">นานเรียกขาน:</label>
-                <input type="text" id="callsign" name="callsign" placeholder="เช่น เทพศิรินทร์นนท์ 01" required>
-        
+
                 <label for="reason">เหตุผลในการขอยืม:</label>
                 <textarea id="reason" name="reason" rows="4" required></textarea>
-        
+
                 <label for="borrow-date">วันที่ต้องการยืม:</label>
                 <input type="date" id="borrow-date" name="borrow-date" required>
-        
+
                 <button type="submit">ส่งคำขอ</button>
             </form>
         </section>
-        
-        <script>
-           
-            document.getElementById('radio-loan-form').addEventListener('submit', function(event) {
-                event.preventDefault(); 
-                
-                const formData = {
-                    name: document.getElementById('name').value,
-                    studentId: document.getElementById('student-id').value,
-                    grade: document.getElementById('grade').value,
-                    studentNumber: document.getElementById('student-number').value,
-                    room: document.getElementById('room').value,
-                    callsign: document.getElementById('callsign').value,
-                    reason: document.getElementById('reason').value,
-                    borrowDate: document.getElementById('borrow-date').value,
-                    requestDate: new Date().toLocaleString() // วันที่ส่งคำขอ
-                };
-    
-                console.log('ข้อมูลคำขอ:', formData);
-        
-                // ตัวอย่างการเก็บข้อมูล (สามารถปรับไปใช้ฐานข้อมูลจริงได้)
-                // เช่น ส่งไปยังเซิร์ฟเวอร์ด้วย fetch API
-                /*
-                fetch('/submit-radio-loan', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(formData)
-                })
-                .then(response => response.json())
-                .then(data => console.log('สำเร็จ:', data))
-                .catch(error => console.error('เกิดข้อผิดพลาด:', error));
-                */
-        
-                alert('ส่งคำขอสำเร็จ! ข้อมูลถูกบันทึกแล้ว');
-                this.reset(); // ล้างฟอร์มหลังส่ง
-            });
-        </script>
     </div>
     <footer>
         <p>© 2568 คณะกรรมการวิทยุคมนาคม โรงเรียนเทพศิรินทร์ นนทบุรี</p>
