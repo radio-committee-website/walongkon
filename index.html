@@ -3,61 +3,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>เกี่ยวกับเรา - คณะกรรมการวิทยุคมนาคม</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file -->
+    <title>หน้าแรก - คณะกรรมการวิทยุคมนาคม โรงเรียนเทพศิรินทร์ นนทบุรี</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>คณะกรรมการวิทยุคมนาคม โรงเรียนเทพศิรินทร์ นนทบุรี</h1>
+        <div class="container">
+            <h1>คณะกรรมการวิทยุคมนาคม</h1>
+            <h2>โรงเรียนเทพศิรินทร์ นนทบุรี</h2>
+            <nav>
+                <ul>
+                    <li><a href="index.html">หน้าแรก</a></li>
+                    <li><a href="about.html">ข้อมูลทั่วไป</a></li>
+                    <li><a href="documents.html">เอกสาร</a></li>
+                    <li><a href="contact.html">ติดต่อเรา</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <nav>
-        <a href="index.html">หน้าแรก</a>
-        <a href="about.html">เกี่ยวกับเรา</a>
-        <a href="activities.html">กิจกรรม</a>
-        <a href="news.html">ข่าวสาร</a>
-        <a href="contact.html">ติดต่อเรา</a>
-    </nav>
-    <div class="content">
-        <section class="history">
-            <h2>ประวัติความเป็นมา</h2>
-            <p>คณะกรรมการวิทยุคมนาคม โรงเรียนเทพศิรินทร์ นนทบุรี ก่อตั้งขึ้นเพื่อสนับสนุนกิจกรรมสื่อสารและความปลอดภัย...</p>
-        </section>
 
-        <section class="announcements">
-            <h2>ประกาศสำคัญ</h2>
-            <ul>
-                <li>เปิดรับสมัครสมาชิกใหม่</li>
-                <li>แจ้งเตือนการใช้งานวิทยุสื่อสาร</li>
-            </ul>
-        </section>
+    <section id="home">
+        <div class="container">
+            <h3>หน้าแรก</h3>
+            <div class="sub-section">
+                <h4>ประกาศจากคณะกรรมการวิทยุคมนาคม</h4>
+                <p>เนื้อหาประกาศจะแสดงที่นี่ (ตัวอย่าง).</p>
+            </div>
+            <div class="sub-section">
+                <h4>ข่าวสาร & ประชาสัมพันธ์</h4>
+                <p>ข่าวสารล่าสุดของคณะกรรมการจะแสดงที่นี่ (ตัวอย่าง).</p>
+            </div>
+            <div class="sub-section">
+                <h4>ฟอร์มขอยืมอุปกรณ์วิทยุคมนาคม</h4>
+                <form id="borrowForm">
+                    <label for="firstname">ชื่อ:</label>
+                    <input type="text" id="firstname" name="firstname" required>
 
-        <section class="gallery">
-            <h2>รูปกิจกรรม</h2>
-            <img src="activity1.jpg" alt="กิจกรรม 1">
-            <img src="activity2.jpg" alt="กิจกรรม 2">
-        </section>
+                    <label for="lastname">นามสกุล:</label>
+                    <input type="text" id="lastname" name="lastname" required>
 
-        <section class="radio-loan">
-            <h2>แบบฟอร์มขอยืมวิทยุสื่อสาร</h2>
-            <form id="radio-loan-form">
-                <label for="name">ชื่อ-นามสกุล:</label>
-                <input type="text" id="name" name="name" required>
+                    <label for="class">ชั้น:</label>
+                    <select id="class" name="class" required>
+                        <option value="">เลือกชั้น</option>
+                        <option value="ม.1">ม.1</option>
+                        <option value="ม.2">ม.2</option>
+                        <option value="ม.3">ม.3</option>
+                        <option value="ม.4">ม.4</option>
+                        <option value="ม.5">ม.5</option>
+                        <option value="ม.6">ม.6</option>
+                    </select>
 
-                <label for="student-id">รหัสนักเรียน:</label>
-                <input type="text" id="student-id" name="student-id" required>
+                    <label for="room">ห้อง:</label>
+                    <select id="room" name="room" required>
+                        <option value="">เลือกห้อง</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                    </select>
 
-                <label for="reason">เหตุผลในการขอยืม:</label>
-                <textarea id="reason" name="reason" rows="4" required></textarea>
+                    <label for="number">เลขที่:</label>
+                    <input type="number" id="number" name="number" min="1" max="50" required>
 
-                <label for="borrow-date">วันที่ต้องการยืม:</label>
-                <input type="date" id="borrow-date" name="borrow-date" required>
+                    <label for="callsign">นามเรียกขาน:</label>
+                    <input type="text" id="callsign" name="callsign" required>
 
-                <button type="submit">ส่งคำขอ</button>
-            </form>
-        </section>
-    </div>
+                    <label for="note">หมายเหตุ:</label>
+                    <textarea id="note" name="note" rows="3"></textarea>
+
+                    <label for="datetime">วันที่และเวลา:</label>
+                    <input type="datetime-local" id="datetime" name="datetime" required>
+
+                    <button type="submit">ส่งคำขอยืม</button>
+                </form>
+            </div>
+            <div class="sub-section">
+                <h4>ข้อมูลการขอยืม (หลังบ้าน)</h4>
+                <button id="clearData" style="margin-bottom: 15px;">ล้างข้อมูลทั้งหมด</button>
+                <table id="borrowTable">
+                    <thead>
+                        <tr>
+                            <th>ชื่อ</th>
+                            <th>นามสกุล</th>
+                            <th>ชั้น</th>
+                            <th>ห้อง</th>
+                            <th>เลขที่</th>
+                            <th>นามเรียกขาน</th>
+                            <th>หมายเหตุ</th>
+                            <th>วันที่และเวลา</th>
+                        </tr>
+                    </thead>
+                    <tbody id="borrowTableBody"></tbody>
+                </table>
+            </div>
+            <div class="sub-section">
+                <h4>รูปภาพกิจกรรม</h4>
+                <p>รูปภาพจากกิจกรรมต่างๆ (สามารถเพิ่มรูปได้ในอนาคต).</p>
+            </div>
+            <div class="sub-section">
+                <h4>โรงเรียนในเครือเทพศิรินทร์</h4>
+                <ul>
+                    <li><a href="https://www.debsirin.ac.th/" target="_blank">เทพศิรินทร์</a></li>
+                    <li><a href="https://dsr.ac.th/" target="_blank">เทพศิรินทร์ร่มเกล้า</a></li>
+                    <li><a href="http://www.dsp.ac.th/" target="_blank">เทพศิรินทร์คลองสิบสาม ปทุมธานี</a></li>
+                    <li><a href="https://www.tsn.ac.th/web/" target="_blank">เทพศิรินทร์พุแค สระบุรี</a></li>
+                    <li><a href="https://www.facebook.com/newpr.debsirinphukhae" target="_blank">เทพศิรินทร์ลาดหญ้า</a></li>
+                    <li><a href="https://www.facebook.com/debladya/?locale=th_TH" target="_blank">เทพศิรินทร์ขอนแก่น</a></li>
+                    <li><a href="https://www.facebook.com/dskk.ac.th/" target="_blank">เทพศิรินทร์เชียงใหม่</a></li>
+                    <li><a href="https://www.facebook.com/Debsirin.CM/?locale=th_TH" target="_blank">เทพศิรินทร์๙ โครงการหลวงในพระบรมราชูปถัมภ์</a></li>
+                    <li><a href="http://km.debsirinsp.ac.th/?usid=20120004&language=Th" target="_blank">เทพศิรินทร์สมุทรปราการ</a></li>
+                    <li><a href="https://www.facebook.com/p/%E0%B9%82%E0%B8%A3%E0%B8%87%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B9%80%E0%B8%97%E0%B8%9E%E0%B8%A8%E0%B8%B4%E0%B8%A3%E0%B8%B4%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B9%8C-%E0%B9%99-%E0%B9%82%E0%B8%84%E0%B8%A3%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%AB%E0%B8%A5%E0%B8%A7%E0%B8%87%E0%B8%99%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%A3%E0%B8%A1%E0%B8%A3%E0%B8%B2%E0%B8%8C%E0%B8%B9%E0%B8%9B%E0%B8%96%E0%B8%B1%E0%B8%A1%E0%B8%A0%E0%B9%8C-100057088165239/" target="_blank">เทพศิรินทร์ชลบุรี</a></li>
+                    <li><a href="https://www.chalermrat.ac.th/frontpage/" target="_blank">เทพศิรินทร์ นครศรีธรรมราช</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
     <footer>
-        <p>© 2568 คณะกรรมการวิทยุคมนาคม โรงเรียนเทพศิรินทร์ นนทบุรี</p>
+        <div class="container">
+            <p>© 2025 คณะกรรมการวิทยุคมนาคม โรงเรียนเทพศิรินทร์ นนทบุรี</p>
+        </div>
     </footer>
+
+    <script>
+        // รหัสผ่านแอดมิน (เปลี่ยนได้ตามต้องการ)
+        const ADMIN_PASSWORD = "admin123";
+
+        // ฟังก์ชันจัดการฟอร์มและตาราง
+        document.getElementById('borrowForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // ดึงข้อมูลจากฟอร์ม
+            const borrowData = {
+                firstname: document.getElementById('firstname').value,
+                lastname: document.getElementById('lastname').value,
+                class: document.getElementById('class').value,
+                room: document.getElementById('room').value,
+                number: document.getElementById('number').value,
+                callsign: document.getElementById('callsign').value,
+                note: document.getElementById('note').value,
+                datetime: document.getElementById('datetime').value
+            };
+
+            // ดึงข้อมูลเก่าจาก localStorage หรือเริ่มใหม่ถ้าไม่มี
+            let borrowList = JSON.parse(localStorage.getItem('borrowList')) || [];
+            borrowList.push(borrowData);
+            localStorage.setItem('borrowList', JSON.stringify(borrowList));
+
+            // อัปเดตตาราง
+            updateTable();
+
+            // รีเซ็ตฟอร์ม
+            this.reset();
+        });
+
+        // ฟังก์ชันอัปเดตตาราง
+        function updateTable() {
+            const tableBody = document.getElementById('borrowTableBody');
+            tableBody.innerHTML = '';
+            const borrowList = JSON.parse(localStorage.getItem('borrowList')) || [];
+
+            borrowList.forEach(data => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${data.firstname}</td>
+                    <td>${data.lastname}</td>
+                    <td>${data.class}</td>
+                    <td>${data.room}</td>
+                    <td>${data.number}</td>
+                    <td>${data.callsign}</td>
+                    <td>${data.note || '-'}</td>
+                    <td>${new Date(data.datetime).toLocaleString('th-TH')}</td>
+                `;
+                tableBody.appendChild(row);
+            });
+        }
+
+        // ฟังก์ชันล้างข้อมูล (ต้องใช้รหัสผ่านแอดมิน)
+        document.getElementById('clearData').addEventListener('click', function() {
+            const password = prompt('กรุณากรอกรหัสผ่านแอดมินเพื่อล้างข้อมูล:');
+            if (password === ADMIN_PASSWORD) {
+                if (confirm('คุณแน่ใจหรือไม่ว่าต้องการล้างข้อมูลทั้งหมด?')) {
+                    localStorage.removeItem('borrowList'); // ลบข้อมูลจาก localStorage
+                    updateTable(); // อัปเดตตารางให้ว่าง
+                    alert('ล้างข้อมูลเรียบร้อยแล้ว!');
+                }
+            } else if (password !== null) {
+                alert('รหัสผ่านไม่ถูกต้อง! เฉพาะแอดมินเท่านั้นที่สามารถล้างข้อมูลได้');
+            }
+        });
+
+        // อัปเดตตารางเมื่อโหลดหน้า
+        window.onload = updateTable;
+    </script>
 </body>
 </html>
